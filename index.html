@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Massenger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <script src="https://kit.fontawesome.com/9b220e24a6.js" crossorigin="anonymous"></script>
+    <script src="lib/moment.js"></script>
+    <script src="lib/emoji.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="chatbox">
+      <div class="contacts-menu">
+        <div class="header">
+          <i class="glass fa-solid fa-magnifying-glass"></i>
+          <input type="text" name="search" id="search" placeholder="Search" />
+          <i class="fa-solid fa-plus add-contact-btn"></i>
+        </div>
+        <ul class="contacts"></ul>
+        <div class="add-contact-floating-btn hidden">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+      </div>
+      <div class="overlay-popup hidden">
+        <div class="popup-content">
+          <h3>Add New Contact</h3>
+          <input type="text" id="new-contact-name" placeholder="Name" />
+          <input type="text" id="new-contact-phone" placeholder="Phone Number" />
+          <input type="file" id="new-contact-avatar" accept="image/*" />
+          <button id="save-contact-btn">Save</button>
+        </div>
+      </div>
+      <div class="massaging">
+        <div class="header hidden"></div>
+        <div class="body"></div>
+        <div class="footer hidden">
+          <form class="chat-msg-form">
+            <div class="emoji-picker-wrapper">
+              <i class="fa-regular fa-circle-xmark emoji-btn-hide"></i>
+              <i class="fa-regular fa-face-smile emoji-btn-show"></i>
+              <emoji-picker></emoji-picker>
+            </div>
+            <input type="text" class="chat-txt" placeholder="Type your message .." />
+            <div class="right-icons-wrapper">
+              <i class="fa-solid fa-paperclip paperclip" tool>
+                <input class="attach-file" type="file" name="attach-file" id="attach-file" />
+              </i>
+              <i class="fa-solid fa-paper-plane send-msg-btn"></i>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

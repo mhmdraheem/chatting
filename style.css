@@ -1,0 +1,483 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  --blue-color: #00b0ff;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  /* background-image: url(ocean.jpg); */
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.chatbox {
+  display: flex;
+  position: relative;
+  z-index: 999;
+  background-color: white;
+  height: 100vh;
+}
+
+.contacts-menu {
+  flex: 0;
+  min-width: 400px;
+  height: 100%;
+  border-right: 1px solid #eeeeee;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+.contacts-menu--hidden {
+  display: none;
+}
+
+.contacts-menu--expanded {
+  flex: 1;
+}
+
+.contacts-menu .header {
+  display: flex;
+  gap: 10px;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.contacts-menu .header input {
+  height: 100%;
+  width: 100%;
+  padding: 10px 30px 10px 30px;
+  border: none;
+  background-color: #eceff1;
+  border-radius: 10px;
+  outline: none;
+  min-width: 0;
+  font-size: 13px;
+}
+
+.contacts-menu .header .glass {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  font-size: 12px;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 35px;
+}
+
+.contacts-menu ul .contact-row.hidden {
+  display: none;
+}
+
+.contacts-menu ul .contact-row.active,
+.contacts-menu ul .contact-row:hover {
+  background-color: var(--blue-color);
+}
+
+.contacts-menu ul li {
+  height: 60px;
+  display: flex;
+  gap: 5px;
+  padding: 10px 30px;
+  border-bottom: 1px solid #eeeeee;
+  cursor: pointer;
+  position: relative;
+}
+
+.contacts-menu .contact-row:first-of-type li {
+  border-top: 1px solid #eeeeee;
+}
+
+.contacts-menu ul .contact-row.active li,
+.contacts-menu ul .contact-row:hover li {
+  border-bottom: none;
+}
+
+img.avatar {
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.contacts-menu ul li .details {
+  flex-grow: 1;
+  display: flex;
+  align-self: center;
+}
+
+.contacts-menu ul li .contact {
+  font-size: 13px;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  color: #1c1b1b;
+}
+
+.contacts-menu ul li .contact .name {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.contacts-menu ul li .contact .name span.matched {
+  font-weight: inherit;
+  color: red;
+}
+
+.contacts-menu ul li .contact .msg {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.contacts-menu ul li .date {
+  width: 60px;
+  text-wrap: nowrap;
+  font-size: 10px;
+  margin-left: auto;
+}
+
+.contacts-menu ul .contact-row.active .contact,
+.contacts-menu ul .contact-row:hover .contact,
+.contacts-menu ul .contact-row.active .date,
+.contacts-menu ul .contact-row:hover .date {
+  color: white;
+}
+
+.add-contact-btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.add-contact-floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--blue-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.overlay-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.popup-content input,
+.popup-content button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.massaging {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.massaging--hidden {
+  display: none;
+}
+
+.massaging .header {
+  padding: 10px;
+  font-size: 13px;
+  background-color: #eceff1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.back-button {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.1rem;
+}
+
+.massaging .header.hidden {
+  display: none;
+}
+
+.massaging .header .header-name {
+  align-self: center;
+  font-weight: 300;
+}
+
+.massaging .body {
+  padding: 20px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+.massaging .body {
+  display: flex;
+  flex-direction: column;
+}
+
+.massaging .body .day-separator {
+  align-self: center;
+  margin: 10px 0;
+  font-size: 10px;
+  text-align: center;
+  background-color: grey;
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: white;
+}
+
+.massaging .body .message {
+  padding: 5px 10px;
+  width: fit-content;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 300;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.massaging .body .message.received {
+  background-color: var(--blue-color);
+  position: relative;
+  align-self: flex-start;
+}
+
+.massaging .body .message.sent {
+  background-color: grey;
+  align-self: flex-end;
+  position: relative;
+}
+
+.massaging .body .message.received::before,
+.massaging .body .message.sent::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 5px);
+  border-width: 5px;
+  border-style: solid;
+}
+
+.massaging .body .message.received::before {
+  left: -10px;
+  border-color: transparent var(--blue-color) transparent transparent;
+}
+
+.massaging .body .message.sent::before {
+  right: -10px;
+  border-color: transparent transparent transparent grey;
+}
+
+.massaging .footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  z-index: 999;
+  margin-top: auto;
+}
+
+.massaging .footer.hidden {
+  display: none;
+}
+
+.massaging .body .message .message-time {
+  align-self: flex-end;
+  font-size: 10px;
+  font-weight: inherit;
+}
+
+.massaging .footer {
+  padding: 10px 20px;
+}
+
+.massaging .footer .chat-msg-form {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #eceff1;
+}
+
+.massaging .footer i {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: grey;
+  transition: 0.3s;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.massaging .footer i.emoji-btn-show {
+  margin-left: 10px;
+}
+
+.massaging .footer i.emoji-btn-show:hover,
+.massaging .footer i.emoji-btn-show.active {
+  color: gold;
+}
+
+.massaging .footer i.emoji-btn-hide {
+  width: 0;
+  font-size: 0;
+}
+
+.massaging .footer i.emoji-btn-hide:hover {
+  color: red;
+}
+
+.massaging .footer i.emoji-btn-hide.active {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+}
+
+.massaging .footer .emoji-picker-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+emoji-picker {
+  position: absolute;
+  left: 0px;
+  bottom: calc(100% + 5px);
+}
+
+.massaging .footer .chat-txt {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  flex: 1;
+}
+
+.massaging .footer .right-icons-wrapper {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.massaging .footer .paperclip {
+  margin: 0 10px;
+}
+
+.massaging .footer .paperclip:hover {
+  color: black;
+}
+
+.massaging .footer .paperclip .attach-file {
+  display: none;
+}
+
+.massaging .footer .send-msg-btn {
+  margin-right: 10px;
+}
+
+.massaging .footer .send-msg-btn:hover {
+  color: var(--blue-color);
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 560px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 730px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 980px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1190px;
+  }
+}
+
+.hidden {
+  display: none;
+}

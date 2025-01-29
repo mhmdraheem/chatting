@@ -1,0 +1,171 @@
+{
+  "43241": {
+    "contact": {
+      "id": "2",
+      "name": "Mahmoud Sobhy",
+      "avatar": "megaman.png"
+    },
+    "messages": [
+      {
+        "text": "What's up bro",
+        "senderId": "2",
+        "date": "2024-07-15T10:39"
+      },
+      {
+        "text": "You ready?",
+        "senderId": "2",
+        "date": "2024-07-15T10:40"
+      },
+      {
+        "text": "Nope!!!!",
+        "senderId": "1001",
+        "date": "2024-07-16T01:39"
+      }
+    ]
+  },
+  "7655": {
+    "contact": {
+      "id": "3",
+      "name": "شريف البنا",
+      "avatar": "product.jpeg"
+    },
+    "messages": [
+      {
+        "text": "متى ميعاد تسليم البضاعة؟",
+        "senderId": "1001",
+        "date": "2024-08-22T10:39"
+      },
+      {
+        "text": "tommorow isa",
+        "senderId": "3",
+        "date": "2024-08-22T10:44"
+      },
+      {
+        "text": "باذن الله",
+        "senderId": "1001",
+        "date": "2024-08-22T10:45"
+      }
+    ]
+  },
+  "95654": {
+    "contact": {
+      "id": "4",
+      "name": "+01124496778",
+      "avatar": "shoes.jpg"
+    },
+    "messages": [
+      {
+        "text": "عرض حصري علي الاحذية حبب تعرف اكتر يافندم؟",
+        "senderId": "4",
+        "date": "2024-01-01T10:39"
+      }
+    ]
+  },
+  "500": {
+    "contact": {
+      "id": "4",
+      "name": "+01124496999",
+      "avatar": "team.jpeg"
+    },
+    "messages": [
+      {
+        "text": "We have a discount on our new software valid till 2025",
+        "senderId": "5",
+        "date": "2024-07-07T10:40"
+      },
+      {
+        "text": "Book your seat now",
+        "senderId": "5",
+        "date": "2024-07-07T10:42"
+      }
+    ]
+  },
+  "9223": {
+    "contact": {
+      "id": "6",
+      "name": "Beso",
+      "avatar": "ocean.jpg"
+    },
+    "messages": [
+      {
+        "text": "3amel he ya kbeer",
+        "senderId": "6",
+        "date": "2024-10-11T10:40"
+      },
+      {
+        "text": "tamam el7md llah",
+        "senderId": "1001",
+        "date": "2024-10-11T10:42"
+      },
+      {
+        "text": "kolo foll",
+        "senderId": "1001",
+        "date": "2024-10-12T10:43"
+      },
+      {
+        "text": "ray7een alex bokra, gay?",
+        "senderId": "6",
+        "date": "2024-10-12T10:45"
+      },
+      {
+        "text": "walla 3andak sho3l",
+        "senderId": "6",
+        "date": "2024-10-13T10:45"
+      },
+      {
+        "text": "mesh fady wallahy",
+        "senderId": "1001",
+        "date": "2024-10-14T10:49"
+      },
+      {
+        "text": "mashy law fedeet kalemny :)",
+        "senderId": "1001",
+        "date": "2024-10-15T11:02"
+      },
+      {
+        "text": "mestaneek",
+        "senderId": "1001",
+        "date": "2024-10-15T11:02"
+      },
+      {
+        "text": "eshta",
+        "senderId": "1001",
+        "date": "2024-10-19T11:05"
+      }
+    ]
+  },
+  "32140": {
+    "contact": {
+      "id": "1",
+      "name": "Alaa aldin Mohamed",
+      "avatar": "cat.png"
+    },
+    "messages": [
+      {
+        "text": "Good morning Mohamed! This is Alaa aldin",
+        "senderId": "1",
+        "date": "2024-07-12T01:39"
+      },
+      {
+        "text": "How are you today?",
+        "senderId": "1",
+        "date": "2024-07-12T04:39"
+      },
+      {
+        "text": "Hey, Alaa! I'm great and you?",
+        "senderId": "1001",
+        "date": "2024-07-12T11:39"
+      },
+      {
+        "text": "Great, thanks for asking",
+        "senderId": "1",
+        "date": "2024-07-14T01:00"
+      },
+      {
+        "text": "Good, how can I help you today?",
+        "senderId": "1001",
+        "date": "2024-07-14T04:20"
+      }
+    ]
+  }
+}
